@@ -1,0 +1,50 @@
+[
+    {
+        "name": "autoscript",
+        "description": "This is the urltitle script",
+        "major": "0",
+        "minor": "1"
+    },
+    {
+        "name": "actionfix",
+        "description": "This is the actionfix script",
+        "major": "2",
+        "minor": "0"
+    },
+    {
+        "name": "dccwhois",
+        "description": "This is the actionfix script",
+        "major": "2",
+        "minor": "0"
+    },
+    {
+        "name": "klined",
+        "description": "This is the urltitle script",
+        "major": "2",
+        "minor": "0"
+    },
+    {
+        "name": "notes2",
+        "description": "This is the urltitle script",
+        "major": "3",
+        "minor": "0"
+    },
+    {
+        "name": "resolve",
+        "description": "This is the urltitle script",
+        "major": "2",
+        "minor": "0"
+    },
+    {
+        "name": "urltitle",
+        "description": "This is the urltitle script",
+        "major": "2",
+        "minor": "0"
+    },
+    {
+        "name": "userinfo",
+        "description": "This is the urltitle script",
+        "major": "2",
+        "minor": "0"
+    }
+]
