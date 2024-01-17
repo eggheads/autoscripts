@@ -21,7 +21,7 @@ jobs:
     - name: Commit autoscripts packages
       uses: EndBug/add-and-commit@v9
       with:
-        add: './packages/*.tgz
+        add: './packages/*.tgz'
         author_name: Eggheads Autoscripts
         author_email: geo@eggheads.org
         default_author: user_info
