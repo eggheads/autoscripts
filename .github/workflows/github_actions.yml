@@ -14,7 +14,8 @@ jobs:
 
     - name: Tgz directories
       run: |
-        for dir in ./src/*; do
+        cd src
+        for dir in ./*; do
           echo $dir
           if [ -d "$dir" ]; then
             pkgname=$(basename $dir) 
