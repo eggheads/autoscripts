@@ -20,10 +20,26 @@ jobs:
             tar -czvf ./packages/${pkgname}.tgz $dir
           fi
         done
+    - name: Generate manifest
+      run: |
+        echo "[" > manifest2
+        for dir in src/*; do
+          if [ -d $dir ]; then
+            cd "$dir"
+            name=$(jq -r '.name' manifest.json)
+            version_major=$(jq -r '.version_major' manifest.json)
+            version_minor=$(jq -r '.version_minor' manifest.json)
+            description=$(jq -r '.description' manifest.json)
+            echo "{\"name\":\"$name\",\"version_major\":\"$version_major\",\"version_minor\":\"$version_minor\",\"description\":\"$description\"}," >> ../../manifest2
+            cd ../..
+          fi
+        done
+        sed -i '$ s/.$//' manifest2
+        echo "]" >> manifest2
     - name: Commit autoscripts packages
       uses: EndBug/add-and-commit@v9
       with:
-        add: './packages/*.tgz'
+        add: './packages/*.tgz' manifest
         author_name: Eggheads Autoscripts
         author_email: geo@eggheads.org
         default_author: user_info
