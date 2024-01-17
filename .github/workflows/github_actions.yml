@@ -14,6 +14,7 @@ jobs:
     - name: Tgz directories
       run: |
         for dir in ./src/*; do
+          echo $dir
           if [ -d "$dir" ]; then
             tar -czvf "$dir.tgz" -C ./packages/
           fi
