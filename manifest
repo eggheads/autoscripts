@@ -1,50 +1,18 @@
 [
-    {
-        "name": "autoscript",
-        "description": "This is the urltitle script",
-        "major": "0",
-        "minor": "1"
-    },
-    {
-        "name": "actionfix",
-        "description": "This is the actionfix script",
-        "major": "2",
-        "minor": "0"
-    },
-    {
-        "name": "dccwhois",
-        "description": "This is the actionfix script",
-        "major": "2",
-        "minor": "0"
-    },
-    {
-        "name": "klined",
-        "description": "This is the urltitle script",
-        "major": "2",
-        "minor": "0"
-    },
-    {
-        "name": "notes2",
-        "description": "This is the urltitle script",
-        "major": "3",
-        "minor": "0"
-    },
-    {
-        "name": "resolve",
-        "description": "This is the urltitle script",
-        "major": "2",
-        "minor": "0"
-    },
-    {
-        "name": "urltitle",
-        "description": "This is the urltitle script",
-        "major": "2",
-        "minor": "0"
-    },
-    {
-        "name": "userinfo",
-        "description": "This is the urltitle script",
-        "major": "2",
-        "minor": "0"
-    }
+{"name":"acro","version_major":"2","version_minor":"0","description":"A game that generates a string of letters to which players then compete to create a meaningul phrase from; the results are then voted on to determine a winner."},
+{"name":"actionfix","version_major":"2","version_minor":"0","description":"Gets rid of those ugly /me's people do instead of a .me"},
+{"name":"aidle","version_major":"5","version_minor":"0","description":"Basic anti-idle script, sends random MSGs to the a random channel or a random bot at random time intervals."},
+{"name":"alltools","version_major":"3","version_minor":"0","description":"Useful additional helper Tcl commands for Eggdrop, required by some scripts"},
+{"name":"badwords","version_major":"6","version_minor":"0","description":"Will act upon anyone in a specified channel that mentions words you choose."},
+{"name":"chanlimit","version_major":"5","version_minor":"0","description":"This script maintains a user limit (+l mode) in channels your bot is in"},
+{"name":"dccwhois","version_major":"2","version_minor":"0","description":"Allows all users to '.whois' their own handle"},
+{"name":"getops","version_major":"3","version_minor":"0","description":"A way for bots to get ops from other bots on the botnet (if they're on the same channel)"},
+{"name":"klined","version_major":"2","version_minor":"0","description":"Removes servers from your server list that your bot has been k-lined on"},
+{"name":"notes2","version_major":"3","version_minor":"0","description":"Check your notes on every shared bot of the hub"},
+{"name":"peakusers","version_major":"1","version_minor":"0","description":"Track the most users ever present in a channel"},
+{"name":"resolve","version_major":"2","version_minor":"0","description":"Resolve hostnames or IP addresses via the partyline"},
+{"name":"sentinel","version_major":"3","version_minor":"0","description":"Bot and channel flood protection."},
+{"name":"slowvoice","version_major":"1","version_minor":"1","description":"Voice any user who joins a channel specified after a preset minimum and maximum time. Enable for a channel via .chanset #channeel +slowvoice"},
+{"name":"urltitle","version_major":"2","version_minor":"0","description":"Grab titles of URLs pasted in a channel"},
+{"name":"userinfo","version_major":"2","version_minor":"0","description":"Cute user info settings things"}
 ]
