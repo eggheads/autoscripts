@@ -19,7 +19,7 @@ jobs:
           echo $dir
           if [ -d "$dir" ]; then
             pkgname=$(basename $dir) 
-            tar -czvf ./packages/${pkgname}.tgz $dir
+            tar -czvf ../packages/${pkgname}.tgz $dir
           fi
         done
 
