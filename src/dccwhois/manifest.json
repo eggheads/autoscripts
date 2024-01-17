@@ -1,0 +1,12 @@
+{
+	"schema": 1,
+	"name": "dccwhois",
+	"version_major": 2,
+	"version_minor": 0,
+	"description": "Allows all users to '.whois' their own handle",
+	"config": {
+		"loaded": 1,
+		"udefflag": "compat",
+		"requires": null
+	}
+}

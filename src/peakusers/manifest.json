@@ -1,0 +1,24 @@
+{
+	"schema": 1,
+	"name": "peakusers",
+	"version_major": 1,
+	"version_minor": 0,
+	"description": "Track the most users ever present in a channel",
+	"long_description": "Tracks the most users ever present in a channel. You can also use !peak to check the current record",
+	"config": {
+		"loaded": 1,
+		"udef": {
+            "peakusers": {
+                "type": "flag",
+                "description": "Activates peakusers on a channel"
+            }
+        },
+		"requires": null,
+		"vars": {
+			"peak_flags": {
+				"description": "Which flags are allowed to use the public !peak command. o for globals ops, o|o for channel ops, * for everyone, etc",
+				"value": "*"
+			}
+		}
+	}
+}

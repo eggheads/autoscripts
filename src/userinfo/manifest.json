@@ -1,0 +1,17 @@
+{
+    "schema":1,
+	"name": "userinfo",
+	"version_major": 2,
+	"version_minor": 0,
+	"description": "Cute user info settings things",
+	"config": {
+		"loaded": 0,
+		"requires": "",
+        "vars": {
+            "userinfo-fields": {
+                "description": "Fields to save information into",
+                "value": "URL BF GF IRL EMAIL DOB PHONE ICQ YOUTUBE TWITCH"
+            }
+        }
+	}
+}

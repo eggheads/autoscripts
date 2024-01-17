@@ -1,0 +1,35 @@
+{
+	"schema": 1,
+	"name": "aidle",
+	"version_major": 5,
+	"version_minor": 0,
+	"description": "Basic anti-idle script, sends random MSGs to the a random channel or a random bot at random time intervals.",
+	"config": {
+		"loaded": 1,
+		"udefflag": {
+			"aidle": {
+				"type": "flag",
+				"description": "Activates aidle script on a channel"
+			}
+		},
+		"requires": "",
+		"vars": {
+			"ai_msgbots": {
+				"description": "Send MSGs to other bots instead of sending to the channel? If you enable this, the bot will check for bots on the channel(s) set in ai_chan, and pick a random one to send the anti-idle msg to. Valid settings: 1 to enable, 0 to disable.",
+				"value": 0
+			},
+			"ai_time": {
+				"description": "Maximum time interval between messages (in minutes). Valid settings: 1 or higher.",
+				"value": 60
+			},
+			"ai_uidle": {
+				"description": "Enables a special utimer version of aidle that makes the bot send frequent messages. This generally makes the bot ping out less often, but it increases IRC traffic and can be very annoying unless you have the bots send the messages to a disused channel. The setting ignores ai_time. Valid settings: 1 to enable, 0 to disable.",
+				"value": 0
+			},
+  			"ai_msgs": {
+  				"description": "Messages to send. Valid settings: list of message strings, as shown in the default example.",
+  				"value": "{ \"*yawn*\" \"la la la\" \"hello\" \"rofl\" \"\\001ACTION laughs\\001\" }"
+  			}
+		}
+	}
+}

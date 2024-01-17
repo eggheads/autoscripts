@@ -1,0 +1,18 @@
+{
+    "schema":1,
+	"name": "klined",
+	"version_major": 2,
+	"version_minor": 0,
+	"description": "Removes servers from your server list that your bot has been k-lined on",
+	"long_description": "Even at the best of times, your bot will get k-lined by one operator or another on a server you're running your bot on. This script will 'hopefully' handle this by removing it from your bot's server list when it detects you've been k-lined there. Thus, stopping IRC server admins getting rather peeved at the constant connects from your host",
+	"config": {
+		"loaded": 0,
+		"requires": "",
+        "vars": {
+			"kfile": {
+				"description": "Filename to save kline server list to",
+				"value": "kfile"
+			}
+        }
+	}
+}

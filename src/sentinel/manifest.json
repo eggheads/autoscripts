@@ -1,0 +1,138 @@
+{
+	"schema": 1,
+	"name": "sentinel",
+	"version_major": 3,
+	"version_minor": 0,
+	"description": "Bot and channel flood protection.",
+    "long_description": "sentinel.tcl is centered around its channel lock mechanism. It sets the channel +mi (moderated and invite-only) whenever a substantial flood on the channel is detected. This ensures channel stability when flooded, allowing the bots to deal with the flood as smoothly as possible. Important notes: Make sure no bots are enforcing channel mode -i and/or -m. Bans are added to the bot's internal ban list, and expire after 24 hours by default. If you have +dynamicbans set, the bans may be removed from the channel much sooner than this, but the ban will remain in the bot's internal ban list until it expires. For greater protection against large channel floods, it is recommended you also use a channel limiter script, such as chanlimit",
+	"config": {
+		"loaded": 0,
+		"udefflag": "",
+		"requires": "",
+		"vars": {
+            "sl_bcflood": {
+                "description": "CTCP flood trigger to the bot, in number:seconds format",
+                "value": "5:30"
+            },
+            "sl_bmflood": {
+                "description": "MSG flood trigger to the bot, in number:seconds format",
+                "value": "6:20"
+            },
+            "sl_ccflood": {
+                "description": "Channel CTCP flood trigger, in number:seconds format",
+                "value": "5:20"
+            },
+            "sl_avflood": {
+                "description": "Channel avalanche/tsunami flood, in number:seconds format",
+                "value": "6:20"
+            },
+            "sl_txflood": {
+                "description": "Channel text flood, in number:seconds format",
+                "value": "80:30"
+            },
+            "sl_boflood": {
+                "description": "Channel bogus username flood, in number:seconds format",
+                "value": "4:20"
+            },
+            "sl_jflood": {
+                "description": "Channel join/part flood, in number:seconds format",
+                "value": "6:20"
+            },
+            "sl_nkflood": {
+                "description": "Channel nick flood, in number:seconds format",
+                "value": "6:20"
+            },
+            "sl_tsunami": {
+                "description": "The number of control characters in a line for it to be counted by the tsunami detector. 0 to disable",
+                "value": 10
+            },
+            "sl_ban": {
+                "description": "Length of time in minutes to ban channel flooders. 0 to disable",
+                "value": 1440
+            },
+            "sl_boban": {
+                "description": "Length of time in minutes to ban bogus username floods. 0 to disable",
+                "value": 1440
+            },
+            "sl_globalban": {
+                "description": "Set global bans on channel flooders and bogus usernames? 0 for channel bans, 1 for global bans",
+                "value": 0
+            },
+            "sl_wideban": { 
+                "description": "Set a generic ban if flooders are originating from the same host with different idents, or same ident with different hosts? For example, if multiple flooders have the same ident, then thee whole domain (*!*@*.domain.com) or ident (*!*ident@* is banned. If you disable this, bans are in the *!*@sub.domain.com or *!*@1.2.3.4 format. 0 to disable, 1 to enable",
+                "value": 1
+            },
+            "sl_banmax": {
+                "description": "Maximum number of bans allowed in the bots internal banlist before it stops adding new bans (not channel bans)",
+                "value": 100
+            },
+            "sl_igtime": {
+                "description": "Length of time in minutes to ignore bot flooders. On bots with sl_ban active, channel flooders are also added to the ignore list",
+                "value": 240
+            },
+            "sl_masktype": {
+                "description": "Set the type of banmask to use (0 is recommended)\n0 - *!*@machine.domain.com / *!*@555.555.555.555\n1 - *!*ident@machine.domain.com / *!*ident@555.555.555.555\n2 - *!*ident@*.domain.com / *!*ident@555.555.555.*",
+                "value": 0
+            },
+            "sl_ilocktime": {
+                "description": "Length of time in seconds to set the channel +i upon flood detection. 0 to not remove +i, 30 or higher otherwise",
+                "value": 120
+            },
+            "sl_mlocktime": {
+                "description": "Length of time in seconds to set the channel +m upon flood detection. 0 to not remove +m, 30 or higher otherwise",
+                "value": 120
+            },
+            "sl_shortlock": {
+                "description": "On small floods (two flooders or less), remove +mi after this many seconds. Only used if sl_ban is enabled. 0 to disable, 1 to enable",
+                "value": 1
+            },
+            "sl_bfmaxbans": {
+                "description": "Number of bans to allow in the channel ban list before setting the channel +i. 0 to disable, 1 to enable",
+                "value": 19
+            },
+            "sl_note": {
+                "description": "List of handles to send a note to when the channel or bot is flooded, or a channel banlist becomes full. Blank to disable, a space-separated list of handles otherwise",
+                "value": ""
+            },
+            "sl_cfnotice": {
+                "description": "Notice to send to channel when locked due to flood",
+                "value": "Channel locked temporarily due to flood, sorry for any inconvenience this may cause :-)"
+            },
+            "sl_bfnotice": {
+                "description": "Notice to send to channel when locked due to full ban list",
+                "value": "Channel locked temporarily due to full ban list, sorry for any inconvenience this may cause :-)"
+            },
+            "sl_lockcmds": {
+                "description": "enable 'lc' and 'uc' public commands for locking/unlocking channel? 0 to disable, 1 to enable, 2 to require user to be opped",
+                "value": 2
+            },
+            "sl_lockflags": {
+                "description": "Users with these flags are allowed to use the lc/uc public commands, and .lock/.unlock partyline commands",
+                "value": "o"
+            },
+            "sl_bxsimul": {
+                "description": "Enable BitchX CTCP and AWAY simulation? 0 to disable, 1 to enable",
+                "value": 0
+            }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

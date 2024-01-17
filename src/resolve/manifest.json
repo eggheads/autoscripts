@@ -1,0 +1,12 @@
+{
+    "schema":1,
+	"name": "resolve",
+	"version_major": 2,
+	"version_minor": 0,
+	"description": "Resolve hostnames or IP addresses via the partyline",
+    "long_description": "This script adds the '.resolve' and '.dns' partyline commands which can be used to lookup hostnames or ip addresses",
+	"config": {
+		"loaded": 0,
+		"requires": ""
+	}
+}

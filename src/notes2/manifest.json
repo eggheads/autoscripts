@@ -1,0 +1,12 @@
+{
+    "schema":1,
+	"name": "notes2",
+	"version_major": 3,
+	"version_minor": 0,
+	"description": "Check your notes on every shared bot of the hub",
+    "long_description": "# Check your notes on every shared bot of the hub.\n\n .notes [bot|all] index\n .notes [bot|all] read  <#|all>\n .notes [bot|all] erase <#|all>\n\n may be numbers and/or intervals separated by ; ex: .notes erase 2-4;8;16-\n     .notes noBOTy read all",
+	"config": {
+		"loaded": 0,
+		"requires": ""
+	}
+}

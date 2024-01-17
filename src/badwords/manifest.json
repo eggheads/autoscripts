@@ -1,0 +1,35 @@
+{
+    "schema":1,
+	"name": "badwords",
+	"version_major": 6,
+	"version_minor": 0,
+	"description": "Will act upon anyone in a specified channel that mentions words you choose.",
+	"long_description": "Will act upon anyone in a specified channel that mentions a certain word that you add to the bad words database (wildcards accepted). Such actions popular are /kick and /ban, but can do more.",
+	"config": {
+		"loaded": 0,
+		"udefflag": "badwords",
+		"requires": "",
+		"vars": {
+			"ignorenicks": {
+				"description": "Users to ignore",
+				"value": "nick1 nick2"
+			},
+			"ignoredomains": {
+				"description": "Domains to ignore",
+				"value": "www.youtube.com"
+			},
+			"user_throt": {
+				"description": "How long a user is ignored after using",
+				"value": "30"
+            },
+            "chan_throt": {
+                "description": "How long all users in a channel are ignored after using",
+                "value": "5"
+            },
+            "link_throt": {
+                "description": "How long a link will not be reposted again aftre using",
+                "value": "300"
+			}
+		}
+	}
+}

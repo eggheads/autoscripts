@@ -1,0 +1,56 @@
+{
+	"schema": 1,
+	"name": "acro",
+	"version_major": 2,
+	"version_minor": 0,
+	"description": "A game that generates a string of letters to which players then compete to create a meaningul phrase from; the results are then voted on to determine a winner.",
+	"long_description": "The game starts when the bot generates a string of letters (the ACRO), from which players must try to make a meaningful phrase. For example if the ACRO generated is \u0022MTAGR\u0022, a meaningful phrase could be \u0022man this acro game rocks\u0022. Players are given a limited period in which to submit a phrase, whereafter the bot will read all the submissions, and players will have the opportuniy to vote for the phrase they think is best. A player receives 1 point for every vote his/her phrase receives. After the voting time expires, the bot read the scores and the next round begins. After a pre-determined number of rounds the game ends and the total score for each player is tallied.",
+	"config": {
+		"loaded": 1,
+		"udefflag": {
+			"acro": {
+				"type": "flag",
+				"description": "Activates acro script on a channel"
+			}
+		},
+		"requires": "",
+		"vars": {
+			"acrostartcmd": {
+				"description": "Command which will start the game",
+				"value": "!acro"
+			},
+			"acromin": {
+				"description": "Minimum number of letters for acros",
+				"value": 3
+			},
+			"acromax": {
+				"description": "Maximum number of letters for acros",
+				"value": 5
+			},
+			"acroletters": {
+				"description": "Letters to select from when generating an acro",
+				"value": "abcdefghijklmnopqrstuvwxyz"
+			},
+			"acrorounds": {
+				"description": "Number of rounds to play",
+				"value": 10
+			},
+			"acrotime": {
+				"description": "Number of seconds to give players for submitting an acro",
+				"value": 60
+			},
+			"acrovotetime": {
+				"description": "Number of seconds to give players to vote for an acro",
+				"value": 60
+			},
+			"acrogaptime": {
+				"description": "Number of seconds between rounds",
+				"value": 15
+			},
+			"acrodisgust": {
+				"description": "Text to use if no one plays a round",
+				"value": "[list Pathetic! Disgusting! Terrible! {You suck!} Sheesh!]"
+			}
+		}
+	}
+}

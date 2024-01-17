@@ -1,0 +1,35 @@
+{
+    "schema":1,
+	"name": "urltitle",
+	"version_major": 2,
+	"version_minor": 0,
+	"description": "Grab titles of URLs pasted in a channel",
+	"long_description": "Simple script that grabs the title of any web link spammed into the channel. It does try to work around various versions of http and SNI https issue this might not be fantastic",
+	"config": {
+		"loaded": 0,
+		"udefflag": "linktitle",
+		"requires": "http",
+		"vars": {
+			"ignorenicks": {
+				"description": "Users to ignore",
+				"value": "nick1 nick2"
+			},
+			"ignoredomains": {
+				"description": "Domains to ignore",
+				"value": "www.youtube.com"
+			},
+			"user_throt": {
+				"description": "How long a user is ignored after using",
+				"value": "30"
+            },
+            "chan_throt": {
+                "description": "How long all users in a channel are ignored after using",
+                "value": "5"
+            },
+            "link_throt": {
+                "description": "How long a link will not be reposted again aftre using",
+                "value": "300"
+			}
+		}
+	}
+}

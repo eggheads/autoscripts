@@ -1,0 +1,35 @@
+{
+    "schema":1,
+	"name": "chanlimit",
+	"version_major": 5,
+	"version_minor": 0,
+	"description": "This script maintains a user limit (+l mode) in channels your bot is in",
+	"long_description": "This script maintains a user limit (+l mode) in channels your bot is in. It is used primarily to help discourage and reduce the effects of large flood attacks. It adds the following DCC commands for channel/global +m users: .dolimit to run limit checking on demand; .stoplimit to temporarily stop limiting; .startlimit to restart limiting",
+	"config": {
+		"loaded": 0,
+		"udefflag": "chanlimit",
+		"requires": "",
+		"vars": {
+			"cl_limit": {
+				"description": "The limit to set. It will equal the number of users on the channel + this number - e.g. if there are 15 users on the channel and cl_limit is 10, the limit will be set to 25. Set to 1 or higher.",
+				"value": "10"
+			},
+			"cl_grace": {
+				"description": "If the limit doesn't need to be changed by more than this number, don't bother setting a new limit. This reduces annoying, unnecessary limit changes. Set to 1 or higher, otherwise 0 to disable.",
+				"value": "2"
+			},
+			"cl_timer": {
+				"description": "Frequency of checking whether a new limit needs to be set (in minutes). Setting this too low (e.g. less than 3 mins) isn't recommended, as it defeats the purpose if limiting. The more bots you have running chanlimit, the higher you should set this. Must be set to 1 or higher.",
+				"value": "10"
+	                },
+	               "cl_server": {
+		                "description": "Servers will sometimes set an undesirable channel limit after returning from a split. If you enable this feature, chanlimit check the channel limit if it is changed by a server and reset it if necessary. 1 to enable, 0 to disable.",
+		                "value": "5"
+	                },
+	                "cl_log": {
+		                "description": "Log limit changes. 1 to enable, 0 to disable.",
+		                "value": "0"
+            		}
+        	}
+	}
+}
