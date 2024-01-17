@@ -16,7 +16,8 @@ jobs:
         for dir in ./src/*; do
           echo $dir
           if [ -d "$dir" ]; then
-            tar -czvf ./packages/$dir.tgz ./src/$dir
+            pkgname=$(basename $dir) 
+            tar -czvf ./packages/${pkgname}.tgz $dir
           fi
         done
     - name: Commit autoscripts packages
