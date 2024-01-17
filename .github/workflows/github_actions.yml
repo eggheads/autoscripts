@@ -1,0 +1,29 @@
+name: Package autoscripts
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  tar_directories:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Tgz directories
+      run: |
+        for dir in ./src/*; do
+          if [ -d "$dir" ]; then
+            tar -czvf "$dir.tgz" -C ./packages/
+          fi
+        done
+    - name: Commit autoscripts packages
+      uses: EndBug/add-and-commit@v9
+      with:
+        add: './packages/*.tgz
+        author_name: Eggheads Autoscripts
+        author_email: geo@eggheads.org
+        default_author: user_info
+        message: Update autoscripts
+        push: true
