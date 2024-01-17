@@ -11,6 +11,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+
     - name: Tgz directories
       run: |
         for dir in ./src/*; do
@@ -20,6 +21,7 @@ jobs:
             tar -czvf ./packages/${pkgname}.tgz $dir
           fi
         done
+
     - name: Generate manifest
       run: |
         echo "[" > manifest
@@ -36,6 +38,7 @@ jobs:
         done
         sed -i '$ s/.$//' manifest
         echo "]" >> manifest
+
     - name: Commit autoscripts packages
       uses: EndBug/add-and-commit@v9
       with:
