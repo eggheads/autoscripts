@@ -14,5 +14,6 @@
 {"name":"sentinel","version_major":"3","version_minor":"0","description":"Bot and channel flood protection."},
 {"name":"slowvoice","version_major":"1","version_minor":"1","description":"Voice any user who joins a channel specified after a preset minimum and maximum time. Enable for a channel via .chanset #channeel +slowvoice"},
 {"name":"urltitle","version_major":"2","version_minor":"0","description":"Grab titles of URLs pasted in a channel"},
-{"name":"userinfo","version_major":"2","version_minor":"0","description":"Cute user info settings things"}
+{"name":"userinfo","version_major":"2","version_minor":"0","description":"Cute user info settings things"},
+{"name":"autoscripts","version_major":"1","version_minor":"0","description":"Eggdrop autoscripts"}
 ]
