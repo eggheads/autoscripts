@@ -6,7 +6,7 @@
 {"name":"badwords","version_major":"6","version_minor":"0","description":"Will act upon anyone in a specified channel that mentions words you choose."},
 {"name":"chanlimit","version_major":"5","version_minor":"0","description":"This script maintains a user limit (+l mode) in channels your bot is in"},
 {"name":"dccwhois","version_major":"2","version_minor":"0","description":"Allows all users to '.whois' their own handle"},
-{"name":"getops","version_major":"3","version_minor":"0","description":"A way for bots to get ops from other bots on the botnet (if they're on the same channel)"},
+{"name":"getops","version_major":"3","version_minor":"1","description":"A way for bots to get ops from other bots on the botnet (if they're on the same channel)"},
 {"name":"klined","version_major":"2","version_minor":"0","description":"Removes servers from your server list that your bot has been k-lined on"},
 {"name":"notes2","version_major":"3","version_minor":"0","description":"Check your notes on every shared bot of the hub"},
 {"name":"peakusers","version_major":"1","version_minor":"0","description":"Track the most users ever present in a channel"},
