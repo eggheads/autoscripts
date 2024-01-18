@@ -33,11 +33,13 @@ jobs:
             version_major=$(jq -r '.version_major' manifest.json)
             version_minor=$(jq -r '.version_minor' manifest.json)
             description=$(jq -r '.description' manifest.json)
-            echo "{\"name\":\"$name\",\"version_major\":\"$version_major\",\"version_minor\":\"$version_minor\",\"description\":\"$description\"}," >> ../../manifest
             cd ../..
+            echo "{\"name\":\"$name\",\"version_major\":\"$version_major\",\"version_minor\":\"$version_minor\",\"description\":\"$description\"}," >> manifest
           fi
         done
-        sed -i '$ s/.$//' manifest
+        asmajor=$(grep "set asmajor" autoscripts.tcl| awk '{print $3}')
+        asminor=$(grep "set asminor" autoscripts.tcl| awk '{print $3}')
+        echo "{\"name\":\"autoscripts\",\"version_major\":\"$asmajor\",\"version_minor\":\"$asminor\",\"description\":\"Eggdrop autoscripts\"}" >> manifest
         echo "]" >> manifest
 
     - name: Commit autoscripts packages
